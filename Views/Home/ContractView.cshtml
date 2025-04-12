@@ -1,0 +1,58 @@
+﻿@model RotativaPDFDemo.Models.MyViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Contract PDF</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            font-size: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e8e8e8;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Site</th>
+                <th> (Job File No) رقم الملف الوظيفي</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 1; i <= 50; i++)
+            {
+                <tr>
+                    <td>HR Dept @i</td>
+                    <td>Head Office @i</td>
+                    <td>@(123450 + i)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ysr/yvP9Jkk=",
+  "success": true,
+  "projectFilePath": "C:\\MY_Apps\\RotativaPDFDemo\\RotativaPDFDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SGunti\\.nuget\\packages\\rotativa.aspnetcore\\1.4.0\\rotativa.aspnetcore.1.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
