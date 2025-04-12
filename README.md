@@ -35,7 +35,7 @@ This repository demonstrates how to generate PDFs from ASP.NET Core MVC Views us
 
 1. Clone this repository
    ```bash
-   git clone https://github.com/<your-username>/aspnetcore-pdf-rotativa-header-logo.git
+   git clone https://github.com/srikanth-tech360/aspnetcore-pdf-rotativa-header-logo.git
 
 2. Install Rotativa.AspNetCore via NuGet
   Install-Package Rotativa.AspNetCore
