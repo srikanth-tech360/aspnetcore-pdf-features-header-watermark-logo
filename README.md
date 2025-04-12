@@ -44,7 +44,7 @@ This repository demonstrates how to generate PDFs from ASP.NET Core MVC Views us
 4. Run the application and access:
      https://localhost:<port>(44558 etc)/Home/GeneratePdf
 
-##📜 License
+## 📜 License
 This project is licensed under the MIT License.
 See the LICENSE file for details.
 
