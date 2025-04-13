@@ -57,3 +57,13 @@ Srikanth-Tech360
 
 ASP.NET Core, PDF Generation, Rotativa.AspNetCore, wkhtmltopdf, Fixed Header Logo, ASP.NET Core MVC, PDF Templates, Arabic PDF generation, Dynamic PDF generation.
 
+## Sample PDF Screesnshots
+
+Screens 1 Hedaer as Logo:
+
+<img width="720" alt="screenshoot1_pdf_Header" src="https://github.com/user-attachments/assets/81760768-941a-4f7f-b62c-d33b8405492c" />
+
+Screen 2 - Fotter Paging and Split Page Header:
+
+<img width="720" alt="screenshoot_pdf_Header" src="https://github.com/user-attachments/assets/026eca14-25cd-46f2-9b58-bd0c49042152" />
+
