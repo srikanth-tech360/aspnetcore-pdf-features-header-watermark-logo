@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hf7e1psmFkyRu6lfDUOyRnzt7lYiJM5XuI4DqhAXUv0=",
+  "Hash": "Ig0SvpgWJlID7LfjiHhvCp36XldK2RRtJIM0fPruDB8=",
   "Source": "RotativaPDFDemo",
   "BasePath": "_content/RotativaPDFDemo",
   "Mode": "Default",
@@ -1338,6 +1338,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\annotated_sample.pdf",
+      "SourceId": "RotativaPDFDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\",
+      "BasePath": "_content/RotativaPDFDemo",
+      "RelativePath": "pdf/annotated_sample#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gj31glymf2",
+      "Integrity": "LOx6r4YHbuUGiaEElOOSpWcEEwJWl8kz2zG3tmFkRNU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdf\\annotated_sample.pdf"
+    },
+    {
+      "Identity": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\sample.pdf",
+      "SourceId": "RotativaPDFDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\",
+      "BasePath": "_content/RotativaPDFDemo",
+      "RelativePath": "pdf/sample#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j7ws48zuyb",
+      "Integrity": "D+aIeGQZVQkTAlqv6FSs3ef4E1mUPYc8BgGqGstqJtI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdf\\sample.pdf"
     },
     {
       "Identity": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
@@ -6365,6 +6407,170 @@
       ]
     },
     {
+      "Route": "pdf/annotated_sample.gj31glymf2.pdf",
+      "AssetFile": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\annotated_sample.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LOx6r4YHbuUGiaEElOOSpWcEEwJWl8kz2zG3tmFkRNU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 16:23:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gj31glymf2"
+        },
+        {
+          "Name": "label",
+          "Value": "pdf/annotated_sample.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LOx6r4YHbuUGiaEElOOSpWcEEwJWl8kz2zG3tmFkRNU="
+        }
+      ]
+    },
+    {
+      "Route": "pdf/annotated_sample.pdf",
+      "AssetFile": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\annotated_sample.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LOx6r4YHbuUGiaEElOOSpWcEEwJWl8kz2zG3tmFkRNU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 16:23:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LOx6r4YHbuUGiaEElOOSpWcEEwJWl8kz2zG3tmFkRNU="
+        }
+      ]
+    },
+    {
+      "Route": "pdf/sample.j7ws48zuyb.pdf",
+      "AssetFile": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\sample.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57059"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D+aIeGQZVQkTAlqv6FSs3ef4E1mUPYc8BgGqGstqJtI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 12:58:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j7ws48zuyb"
+        },
+        {
+          "Name": "label",
+          "Value": "pdf/sample.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D+aIeGQZVQkTAlqv6FSs3ef4E1mUPYc8BgGqGstqJtI="
+        }
+      ]
+    },
+    {
+      "Route": "pdf/sample.pdf",
+      "AssetFile": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\sample.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57059"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D+aIeGQZVQkTAlqv6FSs3ef4E1mUPYc8BgGqGstqJtI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 12:58:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D+aIeGQZVQkTAlqv6FSs3ef4E1mUPYc8BgGqGstqJtI="
+        }
+      ]
+    },
+    {
       "Route": "Rotativa/wkhtmltopdf.exe",
       "AssetFile": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
       "Selectors": [],
@@ -6469,7 +6675,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 12:10:22 GMT"
+          "Value": "Thu, 29 May 2025 08:00:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6514,7 +6720,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 12:10:22 GMT"
+          "Value": "Thu, 29 May 2025 08:00:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6559,7 +6765,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 12:10:22 GMT"
+          "Value": "Thu, 29 May 2025 08:00:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6596,7 +6802,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 12:10:22 GMT"
+          "Value": "Thu, 29 May 2025 08:00:30 GMT"
         },
         {
           "Name": "Cache-Control",

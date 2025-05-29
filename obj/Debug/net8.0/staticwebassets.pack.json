@@ -253,6 +253,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\annotated_sample.pdf",
+      "PackagePath": "staticwebassets\\pdf\\annotated_sample.pdf"
+    },
+    {
+      "Id": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\sample.pdf",
+      "PackagePath": "staticwebassets\\pdf\\sample.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RotativaPDFDemo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

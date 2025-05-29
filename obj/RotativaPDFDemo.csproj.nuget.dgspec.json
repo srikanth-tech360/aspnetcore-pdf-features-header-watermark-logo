@@ -50,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "PdfSharpCore": {
+              "target": "Package",
+              "version": "[1.3.67, )"
+            },
             "Rotativa.AspNetCore": {
               "target": "Package",
               "version": "[1.4.0, )"
