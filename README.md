@@ -18,6 +18,8 @@ This repository demonstrates how to generate PDFs from ASP.NET Core MVC Views us
 ✅ Fixed header with logo  
 ✅ Multi-page PDF generation  
 ✅ Footer with page numbers
+✅ Add Watermark to PDF file
+✅
 
 ---
 
