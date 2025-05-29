@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zpa6elovDXX8t06s3trwLld9uB8A+oHjW3WptZag1N8=",
+  "Hash": "XV6f/UE3n6F1pX10WVOrQw+Co+tusnCWizHnlEwhofE=",
   "Source": "RotativaPDFDemo",
   "BasePath": "_content/RotativaPDFDemo",
   "Mode": "Default",
@@ -1354,8 +1354,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a1y6v4mmdg",
-      "Integrity": "Mh+kbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY=",
+      "Fingerprint": "i34ua4p45v",
+      "Integrity": "wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK+w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\pdf\\annotated_sample.pdf"
@@ -6407,7 +6407,7 @@
       ]
     },
     {
-      "Route": "pdf/annotated_sample.a1y6v4mmdg.pdf",
+      "Route": "pdf/annotated_sample.i34ua4p45v.pdf",
       "AssetFile": "C:\\MY_Apps\\RotativaPDFDemo\\wwwroot\\pdf\\annotated_sample.pdf",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6425,11 +6425,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mh+kbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY=\""
+          "Value": "\"wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK+w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 29 May 2025 11:12:31 GMT"
+          "Value": "Thu, 29 May 2025 11:47:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6439,7 +6439,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a1y6v4mmdg"
+          "Value": "i34ua4p45v"
         },
         {
           "Name": "label",
@@ -6447,7 +6447,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Mh+kbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY="
+          "Value": "sha256-wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK+w="
         }
       ]
     },
@@ -6470,11 +6470,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mh+kbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY=\""
+          "Value": "\"wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK+w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 29 May 2025 11:12:31 GMT"
+          "Value": "Thu, 29 May 2025 11:47:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6484,7 +6484,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Mh+kbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY="
+          "Value": "sha256-wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK+w="
         }
       ]
     },

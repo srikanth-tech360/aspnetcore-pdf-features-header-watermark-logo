@@ -732,17 +732,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1117"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 10 Apr 2025 15:01:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/RotativaPDFDemo/pdf/annotated_sample.a1y6v4mmdg.pdf">
+    <StaticWebAssetEndpoint Include="_content/RotativaPDFDemo/pdf/annotated_sample.i34ua4p45v.pdf">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdf\annotated_sample.pdf'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a1y6v4mmdg"},{"Name":"integrity","Value":"sha256-Mh\u002BkbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY="},{"Name":"label","Value":"_content/RotativaPDFDemo/pdf/annotated_sample.pdf"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"73756"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Mh\u002BkbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 29 May 2025 11:12:31 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i34ua4p45v"},{"Name":"integrity","Value":"sha256-wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK\u002Bw="},{"Name":"label","Value":"_content/RotativaPDFDemo/pdf/annotated_sample.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"73756"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK\u002Bw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 29 May 2025 11:47:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/RotativaPDFDemo/pdf/annotated_sample.pdf">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdf\annotated_sample.pdf'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Mh\u002BkbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"73756"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Mh\u002BkbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 29 May 2025 11:12:31 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK\u002Bw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"73756"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022wiWdazDAh2iz46PbL6BQq1ahAzPiIevACP3C7GRgK\u002Bw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 29 May 2025 11:47:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/RotativaPDFDemo/pdf/sample.j7ws48zuyb.pdf">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdf\sample.pdf'))</AssetFile>

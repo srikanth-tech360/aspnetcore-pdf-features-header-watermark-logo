@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RotativaPDFDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f79ae87a384c6b53fd84fbd4017e6d53ad36a4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8786031a9c992aaec087264bd9846b8228bb3c65")]
 [assembly: System.Reflection.AssemblyProductAttribute("RotativaPDFDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RotativaPDFDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

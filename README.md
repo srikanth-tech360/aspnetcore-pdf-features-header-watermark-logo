@@ -1,4 +1,4 @@
-# ASP.NET Core PDF Generation using Rotativa with Fixed Header Logo 🖨️
+# ASP.NET Core PDF Generation - Fixed Header Logo - Watremark - Tetx Annotation - Paging 🖨️
 
 ## 📚 Table of Contents
 
@@ -23,11 +23,13 @@ This repository demonstrates how to generate PDFs from ASP.NET Core MVC Views us
 
 ## ✨ Features
 
-- ASP.NET Core MVC project
+ASP.NET Core MVC project
 - Rotativa.AspNetCore integration
-- Fixed logo on every page
+- Fixed logo on every page Header
+- Page Numbers at footer
 - Clean and customizable PDF output
-- Arabic/English mixed content support
+- Appending text to Existing PDF OR  Recreating new PDF with Tetx Annotation
+- Add Watermark to existing documnet - Only while dowbloading PDF file or Opening file
 
 ---
 
