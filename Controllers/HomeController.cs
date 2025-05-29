@@ -44,7 +44,7 @@ namespace RotativaPDFDemo.Controllers
             if (string.IsNullOrWhiteSpace(text))
                 return BadRequest("Empty text");
 
-            var encrypted = PdfEncryptionHelper.Encrypt(text);
+            var encrypted = PdfEncryptionHelper.EncryptShort(text);
             return Content(encrypted);
         }
 

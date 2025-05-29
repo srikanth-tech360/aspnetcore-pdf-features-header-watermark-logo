@@ -1,6 +1,7 @@
 ﻿@{
     Layout = null;
     var userName = ViewBag.UserName;
+    ViewData["Title"] = "Watermarked PDF Tools";
 }
 <!DOCTYPE html>
 <html>
@@ -10,16 +11,67 @@
     <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 </head>
 <body>
-    <h2>PDF Viewer with Watermark</h2>
-    <button onclick="downloadWatermarkedPdf()">Download Watermarked PDF</button>
+    
+    <div class="container py-5 text-center">
 
-    <br />
+        <h2 class="text-primary mb-3">📄 PDF Viewer with Watermark</h2>
+        <button class="btn btn-outline-secondary px-4 py-2 rounded-pill mb-4" onclick="downloadWatermarkedPdf()">
+            ⬇️ Download Watermarked PDF
+        </button>
 
-    <h2>PDF Open with Watermark</h2>
-    <button onclick="viewWatermarkedPdf()">View PDF in Browser</button>
+        <h2 class="text-primary mb-3">🖥️ PDF Open with Watermark</h2>
+        <button class="btn btn-outline-info px-4 py-2 rounded-pill mb-4" onclick="viewWatermarkedPdf()">
+            👁️ View PDF in Browser
+        </button>
 
-    <h2>Encrypted PDF Open with Watermark</h2>
-    <button onclick="viewEncryptedWatermarkedPdf()">View PDF in Browser</button>
+        <h2 class="text-warning mb-3">🔐 Encrypted PDF Open with Watermark</h2>
+        <button class="btn btn-outline-dark px-4 py-2 rounded-pill mb-4" onclick="viewEncryptedWatermarkedPdf()">
+            👁️‍🗨️ View PDF in Browser
+        </button>
+
+        <hr class="my-5" />
+
+        <h4 class="text-danger mb-3">🧩 Decrypt Watermark</h4>
+
+        <div class="form-group row justify-content-center">
+            <div class="col-md-6">
+                <textarea id="decryptText"
+                          class="form-control text-center"
+                          placeholder="Paste encrypted text here"
+                          rows="3"
+                          style="resize: none;"></textarea>
+
+            </div>
+            <div class="col-auto mt-2">
+                <button class="btn btn-outline-primary rounded-pill" onclick="decryptText()">🔓 Decrypt</button>
+            </div>
+        </div>
+
+        <div id="decryptedResult" class="mt-4 text-success font-weight-bold h5"></div>
+
+    </div>
+
+
+    <script>
+               async function decryptText() {
+            const encrypted = document.getElementById("decryptText").value;
+            if (!encrypted) return;
+
+            try {
+                const response = await fetch(`/Home/DecryptText?text=${encodeURIComponent(encrypted)}`);
+                if (!response.ok) throw new Error("Decryption failed");
+
+                const decrypted = await response.text();
+                const resultDiv = document.getElementById("decryptedResult");
+                resultDiv.innerText = `Decrypted: ${decrypted}`;
+                resultDiv.style.display = 'block';
+            } catch (err) {
+                alert("Error decrypting: " + err.message);
+            }
+        }
+
+    </script>
+
 
     <script>
 
@@ -78,15 +130,40 @@
 
                 page.drawText(encryptedText, {
                 x: 40, // shift start for long span
-                y: height / 2,
+                y: height / 1.5,
                 size: 12,
                 font: font,
                 color: PDFLib.rgb(0.3, 0.3, 0.3),
                 opacity: 0.3,
                 rotate: PDFLib.degrees(35),
                 });
-               
+
+
+                   // 🔒 Second watermark lower down     
+                   
+             page.drawText(encryptedText, {
+                x: 80,               // shift slightly
+                y: height / 2.5,       // one-third height
+                size: 12,
+                font: font,
+                color: PDFLib.rgb(0.3, 0.3, 0.3),
+                opacity: 0.25,
+                rotate: PDFLib.degrees(35),
             });
+
+             page.drawText(encryptedText, {
+                x: 160,               // shift slightly
+                y: height / 6,       // one-third height
+                size: 12,
+                font: font,
+                color: PDFLib.rgb(0.3, 0.3, 0.3),
+                opacity: 0.25,
+                rotate: PDFLib.degrees(35),
+            });
+
+              
+               
+            });             
 
             const pdfBytes = await pdfDoc.save();
 
@@ -137,4 +214,6 @@
         }
     </script>
 </body>
+
+
 </html>

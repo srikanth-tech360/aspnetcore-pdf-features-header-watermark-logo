@@ -1110,8 +1110,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gj31glymf2</Fingerprint>
-      <Integrity>LOx6r4YHbuUGiaEElOOSpWcEEwJWl8kz2zG3tmFkRNU=</Integrity>
+      <Fingerprint>a1y6v4mmdg</Fingerprint>
+      <Integrity>Mh+kbXXhD13q6Km20ktT8aQGi0iIAM3PLNnDg2ZqHdY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdf\annotated_sample.pdf'))</OriginalItemSpec>
