@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
     var userName = ViewBag.UserName;
     ViewData["Title"] = "Watermarked PDF Tools";
 }
@@ -14,32 +14,32 @@
     
     <div class="container py-5 text-center">
 
-        <h2 class="text-primary mb-3">📄 PDF Viewer with Watermark</h2>
+        <h4 class="text-primary mb-3">📄 PDF Viewer with Watermark</h4>
         <button class="btn btn-outline-secondary px-4 py-2 rounded-pill mb-4" onclick="downloadWatermarkedPdf()">
             ⬇️ Download Watermarked PDF
         </button>
 
-        <h2 class="text-primary mb-3">🖥️ PDF Open with Watermark</h2>
+        <h4 class="text-primary mb-3">🖥️ PDF Open with Watermark</h4>
         <button class="btn btn-outline-info px-4 py-2 rounded-pill mb-4" onclick="viewWatermarkedPdf()">
             👁️ View PDF in Browser
         </button>
 
-        <h2 class="text-warning mb-3">🔐 Encrypted PDF Open with Watermark</h2>
+        <h4 class="text-warning mb-3">🔐 Encrypted PDF Open with Watermark</h4>
         <button class="btn btn-outline-dark px-4 py-2 rounded-pill mb-4" onclick="viewEncryptedWatermarkedPdf()">
             👁️‍🗨️ View PDF in Browser
         </button>
 
-        <hr class="my-5" />
+        <hr class="my-2" />
 
-        <h4 class="text-danger mb-3">🧩 Decrypt Watermark</h4>
+        <h5 class="text-danger mb-3">🧩 Decrypt Watermark</h5>
 
         <div class="form-group row justify-content-center">
             <div class="col-md-6">
                 <textarea id="decryptText"
-                          class="form-control text-center"
-                          placeholder="Paste encrypted text here"
-                          rows="3"
-                          style="resize: none;"></textarea>
+          class="form-control text-center"
+          placeholder="Paste encrypted text here"
+          rows="3"
+          style="resize: none;"></textarea>
 
             </div>
             <div class="col-auto mt-2">
