@@ -19,11 +19,11 @@ This repository demonstrates how to generate PDFs from ASP.NET Core MVC Views us
 ✅ Multi-page PDF generation  
 ✅ Footer with page numbers
 ✅ Add Watermark to PDF file
-✅
+✅ Annotate Permanant text
 
 ---
 
-## ✨ Features
+## ✨ Environment and Features
 
 ASP.NET Core MVC project
 - Rotativa.AspNetCore integration
@@ -65,9 +65,16 @@ ASP.NET Core, PDF Generation, Rotativa.AspNetCore, wkhtmltopdf, Fixed Header Log
 
 Screens 1 Hedaer as Logo:
 
+![image](https://github.com/user-attachments/assets/39082a18-2123-41d7-8af3-4d178644d9e1)
+
+![image](https://github.com/user-attachments/assets/0921f3fa-a0ac-4041-8e73-7f4e45f22382)
+
+![image](https://github.com/user-attachments/assets/4c89323e-b2d0-476a-a5d8-91b1ee86d069)
+
+
 <img width="720" alt="screenshoot1_pdf_Header" src="https://github.com/user-attachments/assets/81760768-941a-4f7f-b62c-d33b8405492c" />
 
-Screen 2 - Fotter Paging and Split Page Header:
+Fotter Paging and Split Page Header
 
-<img width="720" alt="screenshoot_pdf_Header" src="https://github.com/user-attachments/assets/026eca14-25cd-46f2-9b58-bd0c49042152" />
+
 
