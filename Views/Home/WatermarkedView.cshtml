@@ -1,0 +1,140 @@
+﻿@{
+    Layout = null;
+    var userName = ViewBag.UserName;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PDF with Watermark</title>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+    <h2>PDF Viewer with Watermark</h2>
+    <button onclick="downloadWatermarkedPdf()">Download Watermarked PDF</button>
+
+    <br />
+
+    <h2>PDF Open with Watermark</h2>
+    <button onclick="viewWatermarkedPdf()">View PDF in Browser</button>
+
+    <h2>Encrypted PDF Open with Watermark</h2>
+    <button onclick="viewEncryptedWatermarkedPdf()">View PDF in Browser</button>
+
+    <script>
+
+         async function viewWatermarkedPdf() {
+            const url = '/pdf/sample.pdf';
+            const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+            const pages = pdfDoc.getPages();
+            const font = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+
+            const watermark = "Downloaded by: Srikanth - 12345";
+
+            pages.forEach(page => {
+                const { width, height } = page.getSize();
+                page.drawText(watermark, {
+                    x: 50,
+                    y: height - 40,
+                    size: 14,
+                    font: font,
+                    color: PDFLib.rgb(0.7, 0.7, 0.7),
+                    opacity: 0.3,
+                });
+            });
+
+            const pdfBytes = await pdfDoc.save();
+
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const blobUrl = URL.createObjectURL(blob);
+
+            // ✅ Open in new browser tab
+            window.open(blobUrl, '_blank');
+        }
+
+        async function viewEncryptedWatermarkedPdf()
+        {
+            const url = '/pdf/sample.pdf';
+            const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+            const pages = pdfDoc.getPages();
+            const font = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+
+            // 🔐 Watermark Data
+            const userName = 'sk.gunti';
+            const timestamp = new Date().toLocaleString();
+            const watermarkData = `${userName} - ${timestamp}`;
+
+            // 🔐 Encrypt it via server-side call
+            const encryptedText = await fetch(`/Home/EncryptText?text=${encodeURIComponent(watermarkData)}`)
+                .then(res => res.text());
+
+            // 🖨️ Add watermark (light gray)
+            pages.forEach(page => {
+                const { width, height } = page.getSize();
+
+                page.drawText(encryptedText, {
+                x: 40, // shift start for long span
+                y: height / 2,
+                size: 12,
+                font: font,
+                color: PDFLib.rgb(0.3, 0.3, 0.3),
+                opacity: 0.3,
+                rotate: PDFLib.degrees(35),
+                });
+               
+            });
+
+            const pdfBytes = await pdfDoc.save();
+
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const blobUrl = URL.createObjectURL(blob);
+
+            // ✅ Open in new browser tab
+            window.open(blobUrl, '_blank');
+
+            // ♻️ Clean up
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
+        }
+
+
+        async function downloadWatermarkedPdf() {
+            const existingPdfBytes = await fetch('/pdf/sample.pdf').then(res => res.arrayBuffer());
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+            const pages = pdfDoc.getPages();
+
+            const font = await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+
+            const watermark = "Downloaded by: @userName";
+
+             pages.forEach(page => {
+                const { width, height } = page.getSize();           
+
+                    // Main Text Layer: On top of shadow, lighter color
+                    page.drawText(watermark, {
+                        x: 150,
+                        y: height / 2,
+                        size: 24,
+                        font: font,
+                        color: PDFLib.rgb(0.75, 0.75, 0.75),  // Light gray
+                        opacity: 0.3,
+                        rotate: PDFLib.degrees(45),
+                    });
+                });
+
+            const pdfBytes = await pdfDoc.save();
+
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'WatermarkedDocument.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
