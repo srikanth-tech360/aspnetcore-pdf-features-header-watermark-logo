@@ -14,19 +14,19 @@
     
     <div class="container py-5 text-center">
 
-        <h4 class="text-primary mb-3">📄 PDF Viewer with Watermark</h4>
+        <h4 class="text-primary mb-3">📄 PDF Download with Watermark</h4>
         <button class="btn btn-outline-secondary px-4 py-2 rounded-pill mb-4" onclick="downloadWatermarkedPdf()">
             ⬇️ Download Watermarked PDF
         </button>
 
-        <h4 class="text-primary mb-3">🖥️ PDF Open with Watermark</h4>
+        <h4 class="text-primary mb-3">🖥️ PDF Open with Watermark - No Encrypt</h4>
         <button class="btn btn-outline-info px-4 py-2 rounded-pill mb-4" onclick="viewWatermarkedPdf()">
-            👁️ View PDF in Browser
+            👁️ View WaterMark PDF in Browser
         </button>
 
         <h4 class="text-warning mb-3">🔐 Encrypted PDF Open with Watermark</h4>
         <button class="btn btn-outline-dark px-4 py-2 rounded-pill mb-4" onclick="viewEncryptedWatermarkedPdf()">
-            👁️‍🗨️ View PDF in Browser
+            👁️‍🗨️ View Encrypted Watermark PDF in Browser
         </button>
 
         <hr class="my-2" />
@@ -177,8 +177,7 @@
             setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
         }
 
-
-        async function downloadWatermarkedPdf() {
+         async function downloadEncryptedWatermarkedPdf() {
             const existingPdfBytes = await fetch('/pdf/sample.pdf').then(res => res.arrayBuffer());
             const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
             const pages = pdfDoc.getPages();
@@ -188,7 +187,7 @@
             const watermark = "Downloaded by: @userName";
 
              pages.forEach(page => {
-                const { width, height } = page.getSize();           
+                const { width, height } = page.getSize();
 
                     // Main Text Layer: On top of shadow, lighter color
                     page.drawText(watermark, {
@@ -211,6 +210,78 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+        }
+
+
+        async function downloadWatermarkedPdf() {
+            const existingPdfBytes = await fetch('/pdf/sample.pdf').then(res => res.arrayBuffer());
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+            const pages = pdfDoc.getPages();
+
+            const font = await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+
+             // 🔐 Watermark Data
+            const userName = 'sk.gunti';
+            const timestamp = new Date().toLocaleString();
+            const watermarkData = `${userName} - ${timestamp}`;
+
+            // 🔐 Encrypt it via server-side call
+            const encryptedText = await fetch(`/Home/EncryptText?text=${encodeURIComponent(watermarkData)}`)
+                .then(res => res.text());
+
+            // 🖨️ Add watermark (light gray)
+            pages.forEach(page => {
+                const { width, height } = page.getSize();
+
+                page.drawText(encryptedText, {
+                x: 40, // shift start for long span
+                y: height / 1.5,
+                size: 12,
+                font: font,
+                color: PDFLib.rgb(0.3, 0.3, 0.3),
+                opacity: 0.3,
+                rotate: PDFLib.degrees(35),
+                });
+
+
+                   // 🔒 Second watermark lower down
+
+                 page.drawText(encryptedText, {
+                    x: 80,               // shift slightly
+                    y: height / 2.5,       // one-third height
+                    size: 12,
+                    font: font,
+                    color: PDFLib.rgb(0.3, 0.3, 0.3),
+                    opacity: 0.25,
+                    rotate: PDFLib.degrees(35),
+                });
+
+                 page.drawText(encryptedText, {
+                    x: 160,               // shift slightly
+                    y: height / 6,       // one-third height
+                    size: 12,
+                    font: font,
+                    color: PDFLib.rgb(0.3, 0.3, 0.3),
+                    opacity: 0.25,
+                    rotate: PDFLib.degrees(35),
+                });
+
+            });
+
+           
+           // const blobUrl = URL.createObjectURL(blob);
+           
+            const pdfBytes = await pdfDoc.save();
+
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'Watermarked_Encrypted_Doc.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            //setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
         }
     </script>
 </body>
